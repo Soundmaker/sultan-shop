@@ -11,28 +11,27 @@ import {CartItem} from "../../store/cart/types";
 
 const Header = () => {
 
-  const { totalPrice, cartItems } = useSelector(selectCart);
-  const { items } = useSelector(selectItemData);
-  const dispatch = useDispatch()
-  const countAmount = (it: CartItem[]): number => {
-    return  it.reduce((i, next) => i+next.count,0)
-  }
-  const [amount, setAmount] = useState(0)
-  const [price, setPrice] = useState(0)
+    const {totalPrice, cartItems} = useSelector(selectCart);
+    const {items} = useSelector(selectItemData);
+    const dispatch = useDispatch()
+    const countAmount = (it: CartItem[]): number => {
+        return it.reduce((i, next) => i + next.count, 0)
+    }
+    const [amount, setAmount] = useState(0)
+    const [price, setPrice] = useState(0)
 
-  useEffect(() => {
-    setAmount(() => countAmount(cartItems));
-    setPrice(() => (Math.ceil(totalPrice*10)/10))
-    dispatch(setTotalPrice())
-  }, [dispatch, cartItems, totalPrice, items])
+    useEffect(() => {
+        setAmount(() => countAmount(cartItems));
+        setPrice(() => (Math.ceil(totalPrice * 10) / 10))
+        dispatch(setTotalPrice())
+    }, [dispatch, cartItems, totalPrice, items])
 
-  return (
-    <header className={styles.header}>
-      <HeaderMobile amount={amount}/>
-
-      <HeaderMain price={price} amount={amount}/>
-    </header>
-  );
+    return (
+        <header className={styles.header}>
+            <HeaderMobile amount={amount}/>
+            <HeaderMain price={price} amount={amount}/>
+        </header>
+    );
 };
 
 export default Header;
