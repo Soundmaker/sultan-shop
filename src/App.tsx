@@ -1,15 +1,17 @@
 import React from 'react';
+import {BrowserRouter} from 'react-router-dom';
+import AppRouter from './components/AppRouter';
 import Header from "./components/Header/Header";
-import {Provider} from "react-redux";
-import {store} from "./store";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
     return (
-        <Provider store={store}>
+        <BrowserRouter>
             <Header/>
-        </Provider>
-
+            <AppRouter/>
+            <Footer/>
+        </BrowserRouter>
     );
 }
 

@@ -2,8 +2,8 @@ import React, {FC} from 'react';
 import styles from "./Params.module.css";
 import {ReactComponent as SearchIcon} from "../../assets/icons/search.svg";
 import {getItemsFromAdmin} from "../../utils/getItemsFromAdmin";
-import {ReactComponent as ArrowIcon} from "../../static/small_arrow.svg";
-import {ReactComponent as ArrowOpenIcon} from "../../static/small_arrow_open.svg";
+import {ReactComponent as ArrowIcon} from "../../assets/icons/small_arrow.svg";
+import {ReactComponent as ArrowOpenIcon} from "../../assets/icons/small_arrow_open.svg";
 
 
 interface iSort {

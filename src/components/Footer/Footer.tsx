@@ -3,7 +3,7 @@ import styles from './Footer.module.css'
 
 import telegram from '../../assets/icons/telegram.svg'
 import whatsapp from '../../assets/icons/whatsapp.svg'
-import visa from '../../assets/icons/visa.svg'
+import visa from '../../assets/image/visa.png'
 import mastercard from '../../assets/image/mastercard.png'
 import mainLogoDark from '../../assets/icons/main-logo-white.svg'
 

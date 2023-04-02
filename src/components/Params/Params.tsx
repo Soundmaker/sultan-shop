@@ -4,12 +4,12 @@ import {selectItemData} from "../../store/items/selectors";
 import {setCategories, setFilters, sort, sortCategory, updateItems} from '../../store/items/itemsSlice';
 import {getItemsFromAdmin} from "../../utils/getItemsFromAdmin";
 import styles from './Params.module.css'
-import {ReactComponent as TrashIcon} from "../../static/delete.svg";
-import {ReactComponent as ArrowUpIcon} from "../../static/arrow_up.svg";
-import {ReactComponent as ArrowDownIcon} from "../../static/arrow_down.svg";
+import {ReactComponent as TrashIcon} from "../../assets/icons/delete.svg";
+import {ReactComponent as ArrowUpIcon} from "../../assets/icons/arrow_up.svg";
+import {ReactComponent as ArrowDownIcon} from "../../assets/icons/arrow_down.svg";
 import {Link} from "react-router-dom";
 import {SHOP_ROUTE} from "../../utils/consts";
-import {ReactComponent as LeftArrow} from "../../static/leftarrow.svg";
+import {ReactComponent as LeftArrow} from "../../assets/icons/leftarrow.svg";
 import Sort from "./Sort";
 import Price from './Price';
 

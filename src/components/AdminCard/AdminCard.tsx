@@ -7,9 +7,9 @@ import {getItemsFromAdmin} from "../../utils/getItemsFromAdmin";
 import {Link} from "react-router-dom";
 import {PRODUCT_ROUTE} from "../../utils/consts";
 import {ReactComponent as GrIcon} from "../../assets/icons/box.svg";
-import {ReactComponent as LitIcon} from "../assets/icons/lit.svg";
+import {ReactComponent as LitIcon} from "../../assets/icons/lit.svg";
 import {Categories} from "../../store/items/itemsTypes";
-import styles from "../pages/Admin/Admin.module.css";
+import styles from "../../pages/Admin/Admin.module.css";
 
 interface IType {
     i: ItemsType;

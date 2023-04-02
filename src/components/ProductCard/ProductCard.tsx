@@ -4,8 +4,8 @@ import {Link} from "react-router-dom";
 import {PRODUCT_ROUTE} from "../../utils/consts";
 
 import {ReactComponent as GrIcon} from "../../assets/icons/box.svg";
-import {ReactComponent as LitIcon} from "../..assets/icons/lit.svg";
-import {ReactComponent as CartIcon} from "../..assets/icons/cart.svg";
+import {ReactComponent as LitIcon} from "../../assets/icons/lit.svg";
+import {ReactComponent as CartIcon} from "../../assets/icons/cart.svg";
 
 import styles from "./ProductCard.module.css";
 import {addItem} from "../../store/cart/cartSlice";
@@ -84,7 +84,10 @@ const ProductCard: FC<IType> = ({i}) => {
                 <strong> {Math.ceil(i.price)} &#8376; </strong>
 
                 <button
-                    onClick={() => dispatch(addItem({...i, count: 1}))}
+                    onClick={() => dispatch(addItem({
+                        ...i, count: 1,
+                        code: ""
+                    }))}
                     className={`${styles.btn} ${styles.btn__text}`}
                 >
                     <span>В корзину</span>
