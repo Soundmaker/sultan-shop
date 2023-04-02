@@ -1,0 +1,223 @@
+@import '../../components/styles/styles'
+
+.item
+  min-height: 55vh
+  display: flex
+  flex-direction: column
+  padding: 0 $padding
+
+  .btn__text
+    padding: 15px 30px
+
+  &__page
+    justify-content: space-between
+
+  .right__side
+    max-width: 800px
+
+  &__info
+    color: $black
+    font-weight: 500
+    font-size: 1rem
+    line-height: 150%
+
+  .info__container
+    display: flex
+    flex-direction: column
+
+    p
+      color: $gray
+      font-style: normal
+      font-weight: 300
+      font-size: 1rem
+      line-height: 150%
+
+  &__img
+    margin-top: 30px
+    margin-right: 40px
+    max-width: 800px
+    max-height: 600px
+    overflow: hidden
+    min-width: 70%
+
+    img
+      min-height: 300px
+      height: 80%
+      object-fit: cover
+
+  .desc
+    max-width: 500px
+    font-weight: 300
+    font-size: 0.8rem
+    line-height: 150%
+    color: $gray
+
+  .price__info
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+  .amount
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+
+  .amount__container
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+
+    span
+      width: 20px
+      text-align: center
+
+  .price
+    white-space: nowrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    font-weight: 800
+    font-size: 2rem
+    line-height: 130%
+
+  .size
+    margin: 10px 0 20px 0
+
+    svg path
+      fill: rgba($gray, 0.2)
+
+  .btn__text
+    font-weight: 700
+    font-size: 1rem
+    line-height: 17px
+
+    svg path
+      fill: $white
+
+  &__btns
+    margin: 20px 0 40px 0
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    button
+      max-width: 320px
+      align-items: center
+
+  &__card
+    color: $gray
+    cursor: pointer
+    align-items: center
+    justify-content: center
+    border: 0
+    min-width: 77px
+    height: 77px
+    background-color: $white
+    padding: 15px 25px
+    font-weight: 400
+    font-size: 1rem
+    line-height: 17px
+    text-align: center
+    border-radius: 10px
+    box-shadow: 2px 2px 7px 0 #f0f0f0
+
+    strong
+      font-weight: 800
+
+  &__name
+    color: $black
+    font-style: normal
+    font-weight: 400
+    font-size: 3rem
+    line-height: 150%
+
+    strong
+      font-weight: 800
+      font-style: normal
+      font-size: 2rem
+      line-height: 150%
+
+  .available
+    color: #1FD85D
+    font-weight: 500
+    font-size: 1.4rem
+    line-height: 130%
+
+  &__download
+    white-space: nowrap
+    display: flex
+    align-items: center
+    justify-content: center
+
+    svg
+      margin-left: 10px
+
+      path
+        fill: $gray !important
+
+  .open__button
+    cursor: pointer
+    border: 0
+    background-color: $white
+    margin: 10px 0
+    font-weight: 500
+    font-size: 1.2rem
+    line-height: 150%
+
+  .info
+    margin-top: 50px
+
+  @media (max-width: $mobile)
+    padding: 0 20px
+    .right__side
+      max-width: 100%
+    &__img
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 10px
+      margin: 0
+      object-fit: cover
+      min-height: 0
+      min-width: 80%
+
+      img
+        max-height: 300px
+        height: 80%
+        object-fit: cover
+
+    .info
+      margin-top: 10px
+    &__btns
+      flex-direction: column
+      justify-content: center
+
+      button
+        max-width: none
+    &__card
+      align-items: center
+      justify-content: center
+    &__download
+      margin-top: 20px
+    .share
+      .btn__text
+        padding: 5px 10px
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      justify-content: space-around
+    .info__container
+      margin-bottom: 20px
+    &__name, strong
+      font-size: 1rem
+    .price
+      margin-right: 60px
+
+      &__info
+        flex-wrap: wrap
+        margin: 20px 0
+        justify-content: flex-start
+
