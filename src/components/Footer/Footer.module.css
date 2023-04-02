@@ -39,38 +39,7 @@
     flex-direction: column;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
 @media (max-width: 950px) {
-    .row {
-        flex-direction: column;
-    }
-}
-
-.amount {
-    cursor: pointer;
-    margin: 0 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
-    border-radius: 1000px;
-    border: 0;
-    width: 34px;
-    height: 23px;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 15px;
-    color: #3F4E65;
-}
-
-.amount__value {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .input {
@@ -152,57 +121,13 @@
     width: 14px;
 }
 
-.btn__cart {
-    cursor: pointer;
-    display: flex;
-    border: 0;
-    background-color: #FFFFFF;
-}
-
-.btn__indicator {
-    border-radius: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 200, 94, 0.96);
-    color: #FFFFFF;
-    position: relative;
-    margin-top: -5px;
-    margin-left: -12px;
-    padding: 10px;
-    width: 10px;
-    height: 10px;
-}
-
 .breadcrumbs {
     display: flex;
     flex-direction: row;
     margin: 20px 0;
 }
 
-.breadcrumbs .vl {
-    height: 15px;
-    margin: 0 13px;
-}
-
-.breadcrumbs .breadcrumb {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 120%;
-    color: #3F4E65;
-}
-
-.breadcrumbs .active {
-    color: rgba(63, 78, 101, 0.5);
-}
-
 @media (max-width: 950px) {
-    .breadcrumbs .breadcrumb {
-        display: flex;
-        padding: 10px;
-        align-items: center;
-    }
 
     .breadcrumbs .breadcrumb span {
         font-weight: 600;
@@ -228,20 +153,6 @@
     .breadcrumbs .breadcrumb .arrow svg path {
         fill: #3F4E65;
     }
-}
-
-.vl {
-    display: flex;
-    margin-top: 7px;
-    border-left: 2px dotted rgba(63, 78, 101, 0.1);
-    height: 30px;
-}
-
-.hl {
-    display: flex;
-    margin-top: 7px;
-    border-top: 2px dotted rgba(63, 78, 101, 0.1);
-    width: 80%;
 }
 
 .mobile {
