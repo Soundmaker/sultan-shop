@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Header.module.css'
-import consultant from '../../static/consultant.png'
-import logo from '../../static/main-logo.svg';
+import dispatcher from '../../assets/image/dispatcher.png';
+import logo from '../../assets/icons/main-logo.svg';
 
-import {ReactComponent as LensIcon} from '../../static/lens.svg';
-import {ReactComponent as CatalogIcon} from '../../static/catalog.svg';
-import {ReactComponent as AddressIcon} from '../../static/address.svg';
-import {ReactComponent as EmailIcon} from '../../static/email.svg';
-import {ReactComponent as DownloadIcon} from '../../static/download.svg';
-import {ReactComponent as CartIcon} from '../../static/cart.svg';
-import {ReactComponent as HamburgerIcon} from '../../static/hamburger-white.svg';
+import {ReactComponent as LensIcon} from '../../assets/icons/search.svg';
+import {ReactComponent as CatalogIcon} from '../../assets/icons/catalog.svg';
+import {ReactComponent as AddressIcon} from '../../assets/icons/location.svg';
+import {ReactComponent as EmailIcon} from '../../assets/icons/email.svg';
+import {ReactComponent as DownloadIcon} from '../../assets/icons/donwload.svg';
+import {ReactComponent as CartIcon} from '../../assets/icons/cart.svg';
+import {ReactComponent as HamburgerIcon} from '../../assets/icons/hamburger-white.svg';
 
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
@@ -105,7 +105,7 @@ const Header = () => {
                 </div>
 
                 <div className={`${styles.col} ${styles.nav__img}`}>
-                    <img src={consultant} alt="consultant"/>
+                    <img src={dispatcher} alt="dispatcher"/>
                 </div>
 
                 <div className={styles.col}>

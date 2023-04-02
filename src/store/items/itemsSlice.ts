@@ -55,7 +55,7 @@ const itemsSlice = createSlice({
             state.items = state.items.sort((a, b) => b.title.localeCompare(a.title))
         },
 
-        sortCat(state) {
+        sortCategory(state) {
             if (state.currentCategory.length) {
                 const findItem = state.categories.find((item: Categories) => {
                     return item.name === state.currentCategory
@@ -122,7 +122,7 @@ const itemsSlice = createSlice({
 export const {
     updateItems,
     sort,
-    sortCat,
+    sortCategory,
     setFilters,
     setTypes,
     setCurrentPage,
