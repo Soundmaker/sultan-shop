@@ -12,51 +12,52 @@ import {ReactComponent as CartIcon} from "../../static/cart.svg";
 import BurgerModal from "../modals/BurgerModal";
 
 interface iHeader {
-  amount: number
+    amount: number
 }
 
 const HeaderMobile: FC<iHeader> = ({amount}) => {
-  const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
 
-  return (
-    <div className={styles.header__mobile} onClick={() => setModalOpen(() => false)} style={modalOpen ?{ position: "relative"} : {overflowY : "unset"}}>
-      <nav className={styles.nav} onClick={e => e.stopPropagation()}>
-        <button className={styles.btn__img} onClick={() => setModalOpen(!modalOpen)}>
-          {modalOpen ? <CloseIcon/> : <HamburgerIcon/>}
-        </button>
+    return (
+        <div className={styles.header__mobile} onClick={() => setModalOpen(() => false)}
+             style={modalOpen ? {position: "relative"} : {overflowY: "unset"}}>
+            <nav className={styles.nav} onClick={e => e.stopPropagation()}>
+                <button className={styles.btn__img} onClick={() => setModalOpen(!modalOpen)}>
+                    {modalOpen ? <CloseIcon/> : <HamburgerIcon/>}
+                </button>
 
-        <Link to={SHOP_ROUTE} className={styles.main_logo}>
-          <img src={logo} alt="Logo"/>
-        </Link>
+                <Link to={SHOP_ROUTE} className={styles.main_logo}>
+                    <img src={logo} alt="Logo"/>
+                </Link>
 
-        <div className={styles.cart}>
-          <Link to={CART_ROUTE} className={styles.btn__cart}>
-            <CartIcon/>
-            <p className={`${styles.btn__indicator}`}>{amount}</p>
-          </Link>
+                <div className={styles.cart}>
+                    <Link to={CART_ROUTE} className={styles.btn__cart}>
+                        <CartIcon/>
+                        <p className={`${styles.btn__indicator}`}>{amount}</p>
+                    </Link>
+                </div>
+
+            </nav>
+
+            <div className={styles.bottom} onClick={e => e.stopPropagation()}>
+                <div className={styles.mobile__btn}>
+                    <Link to={CATALOG_ROUTE} className={`${styles.mobile__link}`}>
+                        <CatalogIcon className={styles.mobile__img}/>
+                        <p>Каталог</p>
+                    </Link>
+                </div>
+                <div className={`${styles.mobile} ${styles.vl}`}></div>
+                <div className={styles.mobile__btn}>
+                    <Link to={"#"} className={`${styles.mobile__link}`}>
+                        <LensIcon className={styles.mobile__img}/>
+                        <p>Поиск</p>
+                    </Link>
+                </div>
+            </div>
+            <BurgerModal show={modalOpen}/>
         </div>
 
-      </nav>
-
-      <div className={styles.bottom} onClick={e => e.stopPropagation()}>
-        <div className={styles.mobile__btn}>
-          <Link to={CATALOG_ROUTE} className={`${styles.mobile__link}`}>
-            <CatalogIcon className={styles.mobile__img}/>
-            <p>Каталог</p>
-          </Link>
-        </div>
-        <div className={`${styles.mobile} ${styles.vl}`}></div>
-        <div className={styles.mobile__btn}>
-          <Link to={"#"} className={`${styles.mobile__link}`}>
-            <LensIcon className={styles.mobile__img}/>
-            <p>Поиск</p>
-          </Link>
-        </div>
-      </div>
-      <BurgerModal show={modalOpen}/>
-    </div>
-
-  );
+    );
 };
 
 export default HeaderMobile;
